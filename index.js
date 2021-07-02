@@ -32,7 +32,7 @@ client.connect(err => {
 
 
     app.get('/products', (req, res) => {
-        productCollection.find({}).limit(20)
+        productCollection.find({})
         .toArray((err, documents) => {
             res.send(documents);
         })
